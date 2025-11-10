@@ -89,7 +89,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
         {questions.map((question, idx) => {
           const qKey = `q${idx + 1}` as keyof typeof ratings
           return (
-            <div key={qKey} className="grid gap-2 my-2.5 border border-gray-200 rounded-3xl p-2.5 bg-white">
+            <div key={qKey} className="grid gap-2 my-2].5 border border-gray-200 rounded-3xl p-2.5 bg-white">
               <label className="text-sm text-gray-600">{question}</label>
               <StarRating value={ratings[qKey]} onChange={(value) => handleStarClick(qKey, value)} />
             </div>
