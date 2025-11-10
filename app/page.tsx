@@ -77,7 +77,7 @@ export default function Home() {
             onClick={() => ratingDialogRef.current?.showModal()}
             className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
           >
-            
+            ⭐ דרגו אותנו!
           </button>
           <button
             onClick={handleShare}
