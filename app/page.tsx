@@ -83,7 +83,7 @@ export default function Home() {
             onClick={handleShare}
             className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-white text-gray-900 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
           >
-            💖 ספרו לחבר
+            
           </button>
         </div>
 
