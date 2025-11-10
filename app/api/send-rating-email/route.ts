@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   try {
     const { ratings, average } = await request.json()
 
-    const recipientEmail = "ariel.kubi@gmail.com"
+    const recipientEmail = process.env.RECIPIENT as string
     const studioName = "סטודיו דוראל אזולאי"
 
     const resend = new Resend(process.env.RESEND_API_KEY)
