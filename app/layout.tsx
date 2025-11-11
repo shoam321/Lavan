@@ -37,7 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`font-sans antialiased`}>
+      {/* Apply site background to the <body> so inner absolutely-positioned elements
+          can't accidentally cover or override it. */}
+      <body className={`font-sans antialiased site-bg`}>
         {children}
         <Analytics />
       </body>
