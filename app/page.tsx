@@ -89,7 +89,7 @@ export default function Home() {
         {/* Social Links */}
         <div className="border-t border-gray-200 bg-gray-50 px-3.5 py-3">
           <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
-          <div className="grid grid-cols-3 gap-2.5">
+          <div className="grid grid-cols-4 gap-2.5">
             <a
               href="https://www.instagram.com/dorelazulay/"
               target="_blank"
@@ -119,6 +119,16 @@ export default function Home() {
               className="flex items-center justify-center py-3 px-3.5 rounded-full font-bold text-white shadow-md hover:shadow-lg transition-shadow bg-black"
             >
               <span>TikTok</span>
+            </a>
+            <a
+              href="https://wa.me/972XXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="flex items-center justify-center py-3 px-3.5 rounded-full font-bold text-white shadow-md hover:shadow-lg transition-shadow"
+              style={{ background: "#25D366" }}
+            >
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>
