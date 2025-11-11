@@ -115,11 +115,44 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* These directives are needed for Tailwind to work.
+  You had them pasted inside the 'body' rule, 
+  but they must be at the top level.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    /* I have removed the code you pasted in here. 
+      It now lives in the correct places, see below.
+    */
   }
+}
+
+/*
+  FIX 1: The .site-bg rule is now on its own, not inside 'body'.
+  This is the correct way to write this CSS.
+*/
+.site-bg {
+  /* FIX 2: The path is now '/background-desktop.jpg' (not '/public/...')
+    Make sure your image is in the 'public' folder.
+  */
+  background-image: url('/background-desktop.jpg');
+
+  /* These styles make the background cover the full screen nicely */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* This 'fixes' the background so it doesn't move when you scroll */
+  background-attachment: fixed;
+
+  /* Optional: Add a fallback color in case the image fails to load */
+  background-color: #000;
 }
