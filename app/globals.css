@@ -140,7 +140,7 @@
   This is the correct way to write this CSS.
 */
 .site-bg {
-  /* FIX 2: The path is now '/background-desktop.jpg' (not '/public/...')
+  /* FIX 2: The path is now '/background-desktop.jpeg' (not '/public/...')
     Make sure your image is in the 'public' folder.
   */
   background-image: url('/background-desktop.jpeg');
