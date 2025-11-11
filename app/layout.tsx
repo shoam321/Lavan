@@ -1,12 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
-// import { Geist, Geist_Mono } from "next/font/google" // הוסר: ייבוא ספציפי ל-Next.js
-// import { Analytics } from "@vercel/analytics/next" // הוסר: ייבוא ספציפי ל-Next.js
-// import "./globals.css" // שמתי בהערה כדי למנוע שגיאת קומפילציה
-// import Script from "next/script" // הוסר: נשתמש בתג <script> רגיל
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-// const _geist = Geist({ subsets: ["latin", "Hebrew"] }) // הוסר
-// const _geistMono = Geist_Mono({ subsets: ["latin"] }) // הוסר
+const _geist = Geist({ subsets: ["latin", "Hebrew"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "סטודיו דוראל אזולאי — מאמן כושר",
@@ -36,31 +35,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  // 1. שמרתי את הסקריפט שלך במשתנה
-  const accessibilityScript = `
-    (function(w,d,s,u,o){
-      w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"he","selected":[]}};
-      var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
-      js.src=u;js.async=true;
-      fjs.parentNode.insertBefore(js,fjs);
-    })(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=c68b58ed-6e98-4890-9e44-066eb7fd6be1");
-  `
-
   return (
     <html lang="he" dir="rtl">
       {/* Apply site background to the <body> so inner absolutely-positioned elements
           can't accidentally cover or override it. */}
       <body className={`font-sans antialiased site-bg`}>
         {children}
-        {/* <Analytics /> */} {/* הוסר */}
-
-        {/* 2. זה המקום שבו הוספת את הקוד! 
-          ממש לפני התג הסוגר של ה-body 
-        */}
-        <script
-          id="accessibility-widget"
-          dangerouslySetInnerHTML={{ __html: accessibilityScript }}
-        />
+        <Analytics />
       </body>
     </html>
   )
