@@ -148,3 +148,29 @@
    This places a full-size anchor behind the UI card so clicking empty background opens the link.
 */
 /* No clickable background link — background is supplied by `body.site-bg`. */
+
+/* Sienna accessibility: hide injected widget UI by default so the site's
+   physical appearance doesn't change. Remove these rules to show the
+   accessibility UI when you want it visible. */
+.sienna-accessibility,
+.sienna-accessibility-widget,
+[data-sienna],
+#sienna-accessibility,
+iframe[src*="sienna-accessibility"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* To show the widget (opt-in), set the data attribute on <body>:
+   document.body.setAttribute('data-sienna', 'visible')
+   This will override the hiding rules and allow the widget to appear. */
+body[data-sienna="visible"] .sienna-accessibility,
+body[data-sienna="visible"] .sienna-accessibility-widget,
+body[data-sienna="visible"] [data-sienna],
+body[data-sienna="visible"] #sienna-accessibility,
+body[data-sienna="visible"] iframe[src*="sienna-accessibility"] {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
