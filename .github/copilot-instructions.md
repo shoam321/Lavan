@@ -41,6 +41,12 @@
 - Network: when testing rating flow, watch the network tab for POST `/api/send-rating-email` and inspect JSON payload.
 - Dialogs: the code uses native `dialog.showModal()` APIs which are not available in some test runners; use a browser for end-to-end testing.
 
+## Background images (responsive)
+- The project uses a full-bleed background image via CSS. To support responsive swapping the project expects two files in `public/`:
+  - `background-mobile.jpg` — default (mobile) image
+  - `background-desktop.jpg` — used at md and larger screens (>= 768px)
+- The CSS rules live in `styles/globals.css` (`.site-bg` / `.site-bg-link`). If you use different names update those rules accordingly.
+
 ## Small examples (copy/paste friendly)
 - Example POST payload sent by `RatingDialog`:
 

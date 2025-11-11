@@ -124,15 +124,23 @@
   }
 }
 
-/* Site background image utility
-   Place an image at `public/background.jpg` (or update the URL below).
-   This class intentionally mirrors inline styles previously used in `app/page.tsx`.
+/* Responsive site background image utility
+   Place two images in `public/`:
+     - `background-mobile.jpg` (used by default for small screens)
+     - `background-desktop.jpg` (used for md and larger screens)
+   This mirrors the previous inline background positioning used in `app/page.tsx`.
 */
 .site-bg {
-  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870');
+  background-image: url('/background-mobile.jpg');
   background-position: center 28%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .site-bg {
+    background-image: url('/public/background-desktop.jpg');
+  }
 }
 
 /* Full-bleed clickable background link.
@@ -141,8 +149,14 @@
 .site-bg-link {
   position: absolute;
   inset: 0;
-  background-image: url('/background.jpg');
+  background-image: url('/public/background-desktop.jpg');
   background-position: center 28%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .site-bg-link {
+    background-image: url('/public/background-desktop.jpg');
+  }
 }
