@@ -42,6 +42,9 @@ export default function RootLayout({
       <body className={`font-sans antialiased site-bg`}>
         {children}
         <Analytics />
+        <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"he","selected":[]}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=c68b58ed-6e98-4890-9e44-066eb7fd6be1");</script>
+
+
       </body>
     </html>
   )
