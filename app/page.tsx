@@ -128,7 +128,7 @@ export default function Home() {
               className="flex items-center justify-center py-3 px-3.5 rounded-full font-bold text-white shadow-md hover:shadow-lg transition-shadow"
               style={{ background: "#25D366" }}
             >
-              <span>WhatsApp</span>
+              <span style={{ fontSize: '90%' }}>WhatsApp</span>
             </a>
           </div>
         </div>
