@@ -26,11 +26,11 @@ export default function SocialButton({
       rel="noopener noreferrer"
       aria-label={ariaLabel ?? label}
       title={title ?? label}
-      className={`inline-flex items-center justify-center gap-1.5 px-3 py-3 rounded-full font-bold text-white shadow-md hover:shadow-lg transition-shadow ${className}`}
+      className={`flex flex-col items-center justify-center gap-1 px-2 py-3 rounded-xl font-semibold text-white shadow-md hover:shadow-lg transition-shadow min-h-[60px] ${className}`}
       style={style}
     >
-      {icon && <span className="w-4 h-4 flex-shrink-0">{icon}</span>}
-      <span className="text-[75%] leading-tight text-center whitespace-nowrap overflow-hidden text-ellipsis">{label}</span>
+      {icon && <span className="w-5 h-5 flex-shrink-0">{icon}</span>}
+      <span className="text-xs leading-none text-center">{label}</span>
     </a>
   )
 }
