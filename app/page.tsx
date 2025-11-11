@@ -55,14 +55,7 @@ export default function Home() {
       dir="rtl"
       lang="he"
     >
-      {/* Clickable background link (fills the viewport) */}
       <a
-        href="https://dorelazulay.co.il"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open site"
-        className="absolute inset-0 z-0 site-bg-link"
-      />
 
       {/* Background overlay (non-blocking so clicks reach the link) */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-transparent z-0 pointer-events-none" />
