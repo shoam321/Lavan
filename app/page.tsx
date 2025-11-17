@@ -18,7 +18,7 @@ export default function Home() {
 
   const handleRatingComplete = (avg: number) => {
     showToastMessage("תודה רבה, דעתך חשובה לנו")
-    if (avg > 4) {
+    if (avg >= 4) {
       setTimeout(() => {
         window.location.href = "https://search.google.com/local/writereview?placeid=ChIJZ2KSBii7HRURMTKVTdJGT8w"
       }, 1000)
