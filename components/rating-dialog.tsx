@@ -37,36 +37,17 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     const average = ratingValues.reduce((a, b) => a + b, 0) / ratingValues.length
 
     setIsLoading(true)
-    try {
-      const response = await fetch("/api/send-rating-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ratings, average }),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        console.error("Email send error:", data.error)
-        alert("אירעה שגיאה בשליחת הדעה")
-        setIsLoading(false)
-        return
+    
+    // Let the form submit naturally to Formspree, then handle completion
+    setTimeout(() => {
+      setIsLoading(false)
+      
+      if (ref && "current" in ref && ref.current?.open) {
+        ref.current.close()
       }
 
-      console.log("[v0] Email sent successfully:", data)
-    } catch (error) {
-      console.error("[v0] Error sending email:", error)
-      alert("אירעה שגיאה בשליחת הדעה")
-      setIsLoading(false)
-      return
-    } 
-    setIsLoading(false)
-
-    if (ref && "current" in ref && ref.current?.open) {
-      ref.current.close()
-    }
-
-    onComplete(average)
+      onComplete(average)
+    }, 1000)
   }
 
   const questions = [
@@ -85,17 +66,23 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
       <h3 className="m-0 mb-2.5 text-base font-bold">דעתכם חשובה לנו</h3>
       <p className="m-0 mb-2 text-sm text-gray-600">דרגו כל סעיף בין ⭐1 ל-⭐5</p>
 
-      <form onSubmit={handleSubmit} className="space-y-2">
+      <form action="https://formspree.io/f/xdkbkoel" method="POST" onSubmit={handleSubmit} className="space-y-2">
         {questions.map((question, idx) => {
           const qKey = `q${idx + 1}` as keyof typeof ratings
           return (
             <div key={qKey} className="grid gap-2 my-2].5 border border-gray-200 rounded-3xl p-2.5 bg-white">
               <label className="text-sm text-gray-600">{question}</label>
               <StarRating value={ratings[qKey]} onChange={(value) => handleStarClick(qKey, value)} />
+              <input type="hidden" name={`rating_${qKey}`} value={ratings[qKey]} />
             </div>
           )
         })}
-
+        
+        {/* Additional form data for Formspree */}
+        <input type="hidden" name="average_rating" value={(ratingValues.reduce((a, b) => a + b, 0) / ratingValues.length).toFixed(1)} />
+        <input type="hidden" name="studio_name" value="סטודיו דוראל אזולאי" />
+        <input type="hidden" name="submission_date" value={new Date().toLocaleString("he-IL")} />
+        
         <div className="flex gap-2 flex-wrap mt-2">
           <button
             type="submit"
