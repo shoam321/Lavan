@@ -4,11 +4,52 @@ import { useState, useRef } from "react"
 import Toast from "@/components/toast"
 import RatingDialog from "@/components/rating-dialog"
 import SocialButton from "@/components/social-button"
+import ModernGallery from "@/components/modern-gallery"
 
 export default function Home() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
   const ratingDialogRef = useRef<HTMLDialogElement>(null)
+
+  // Gallery images
+  const [galleryImages] = useState([
+    {
+      id: 1,
+      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+      title: 'Mountain Peak',
+      subtitle: 'Majestic views at sunrise'
+    },
+    {
+      id: 2,
+      src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=600&fit=crop',
+      title: 'Ocean Waves',
+      subtitle: 'Crashing waves at dusk'
+    },
+    {
+      id: 3,
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+      title: 'Portrait',
+      subtitle: 'Candid moment captured'
+    },
+    {
+      id: 4,
+      src: 'https://images.unsplash.com/photo-1514080267045-ad881b06b470?w=800&h=600&fit=crop',
+      title: 'City Lights',
+      subtitle: 'Urban landscape at night'
+    },
+    {
+      id: 5,
+      src: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=800&h=600&fit=crop',
+      title: 'Forest Path',
+      subtitle: 'Nature\'s quiet sanctuary'
+    },
+    {
+      id: 6,
+      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+      title: 'Sunset',
+      subtitle: 'Golden hour magic'
+    },
+  ])
 
   const showToastMessage = (message: string) => {
     setToastMessage(message)
@@ -72,7 +113,7 @@ export default function Home() {
         </div>
 
         {/* Action Buttons */}
-        <div className="grid gap-2.5 px-4 pb-3.5 sm:grid-cols-3">
+        <div className="grid gap-2.5 px-4 pb-3.5 sm:grid-cols-2">
           <button
             onClick={() => ratingDialogRef.current?.showModal()}
             className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
@@ -85,12 +126,6 @@ export default function Home() {
           >
             💖 ספרו לחבר
           </button>
-          <a
-            href="/gallery"
-            className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-purple-600 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
-          >
-            📸 גלריה
-          </a>
         </div>
 
         {/* Social Links */}
@@ -143,6 +178,13 @@ export default function Home() {
         {/* Footer */}
         <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600 bg-gray-100">
           © {new Date().getFullYear()} סטודיו דוראל אזולאי
+        </div>
+      </div>
+
+      {/* Gallery Section - Below Main Content */}
+      <div className="absolute bottom-0 left-0 right-0 w-full" style={{ top: '100vh' }}>
+        <div className="w-full h-screen">
+          <ModernGallery images={galleryImages} autoplay={true} />
         </div>
       </div>
 
