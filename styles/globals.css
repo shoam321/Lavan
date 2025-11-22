@@ -74,19 +74,15 @@
 
 /* Theme tokens are defined as CSS variables in :root above */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Base styles for all elements */
+* {
+  border-color: var(--border);
+  outline-color: rgb(var(--ring) / 50%);
+}
 
-@layer base {
-  * {
-    border-color: var(--border);
-    outline-color: rgb(var(--ring) / 50%);
-  }
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-  }
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 /* Responsive site background image utility

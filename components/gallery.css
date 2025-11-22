@@ -91,18 +91,12 @@
   cursor: pointer;
   scroll-snap-align: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media (max-width: 900px) {
   .mg-tile {
     width: 100%;
     max-width: 320px;
     height: 450px;
   }
-}
-
-.mg-tile.active {
-  /* Active state styling */
 }
 
 /* Media container */
