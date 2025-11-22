@@ -209,7 +209,9 @@ export default function ModernGallery({ images = [], autoplay = true }: ModernGa
         {items.map((it, i) => (
           <article
             key={it.id || i}
-            ref={(el) => (tilesRef.current[i] = el)}
+            ref={(el) => {
+              if (el) tilesRef.current[i] = el
+            }}
             className={`mg-tile ${i === active ? 'active' : ''}`}
             onClick={() => scrollToIndex(i)}
             role="listitem"
@@ -242,7 +244,13 @@ export default function ModernGallery({ images = [], autoplay = true }: ModernGa
 
         <div className="mg-thumbs">
           {items.map((it, i) => (
-            <button key={it.id || i} className={`mg-thumb ${i === active ? 'active' : ''}`} onClick={() => scrollToIndex(i)} aria-label={it.title}>
+            <button
+              key={it.id || i}
+              className={`mg-thumb ${i === active ? 'active' : ''}`}
+              onClick={() => scrollToIndex(i)}
+              aria-label={it.title || ''}
+              type="button"
+            >
               <img src={it.src} alt="" loading="lazy" />
             </button>
           ))}
