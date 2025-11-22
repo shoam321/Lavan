@@ -20,6 +20,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     q4: 0,
     q5: 0,
   })
+  const [feedback, setFeedback] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
   const ratingValues = Object.values(ratings)
@@ -44,6 +45,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
       },
       average: average.toFixed(1),
       averageStarDisplay: `⭐ ${average.toFixed(1)}/5 ${average >= 4 ? '🎉' : ''}`,
+      feedback: feedback.trim() || "(no feedback provided)",
       timestamp: new Date().toISOString(),
       locale: typeof navigator !== 'undefined' ? navigator.language : 'he-IL',
       timezoneOffsetMinutes: new Date().getTimezoneOffset(),
@@ -103,6 +105,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
         formData.append('atmosphere_cleanliness', payload.ratingsStarDisplay.atmosphereCleanliness)
         formData.append('recommendation_likelihood', payload.ratingsStarDisplay.recommendationLikelihood)
         formData.append('average', payload.averageStarDisplay)
+        formData.append('feedback', payload.feedback)
         formData.append('business_name', payload.businessName)
         formData.append('timestamp', payload.timestamp)
         formData.append('locale', payload.locale)
@@ -154,6 +157,20 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
             </div>
           )
         })}
+        
+        {/* Optional free-text feedback field */}
+        <div className="border border-gray-200 rounded-3xl p-2.5 bg-white">
+          <label className="text-sm text-gray-600 block mb-2">משהו שתרצו להוסיף? (לא חובה)</label>
+          <textarea
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            placeholder="כתבו את ההערות או הצעות שלכם כאן..."
+            className="w-full border border-gray-300 rounded-lg p-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+            rows={3}
+            maxLength={500}
+          />
+          <p className="text-xs text-gray-400 mt-1 text-right">{feedback.length}/500</p>
+        </div>
         
         {/* Formspree hidden fields no longer required for n8n; keep if you need dual delivery */}
         {/* <input type="hidden" name="average_rating" value={(ratingValues.reduce((a, b) => a + b, 0) / ratingValues.length).toFixed(1)} /> */}
