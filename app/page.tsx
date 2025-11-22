@@ -15,39 +15,39 @@ export default function Home() {
   const [galleryImages] = useState([
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-      title: 'Mountain Peak',
-      subtitle: 'Majestic views at sunrise'
+      src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=600&fit=crop',
-      title: 'Ocean Waves',
-      subtitle: 'Crashing waves at dusk'
+      src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
-      title: 'Portrait',
-      subtitle: 'Candid moment captured'
+      src: 'https://lh3.googleusercontent.com/p/AF1QipM0NFyU_xav2Qp7-etRANZ3K3ZJT9sCpZjLUPQZ=s680-w680-h510-rw',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1514080267045-ad881b06b470?w=800&h=600&fit=crop',
-      title: 'City Lights',
-      subtitle: 'Urban landscape at night'
+      src: 'https://www.facebook.com/photo/?fbid=459196583033675&set=a.357698879850113&__cft__[0]=AZWxw9ewoVRbvVccBBqQAYnZDas26t7e8lgmFM2-FKpMG8Uwo5TCwpAfcL7-5IefxE01z-sL9EyfcURXF8GBwupwkEoEBtYxXm_T6ncEmNlZKmH1NhKwBMWza53vWyb5YxLyNF17TGPdoMZS7ZBS50-YsVhG6AYEtUS3ePS3Ojndngrd6teq2BmsW8jp2NKv9aM&__tn__=EH-R',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=800&h=600&fit=crop',
-      title: 'Forest Path',
-      subtitle: 'Nature\'s quiet sanctuary'
+      src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-      title: 'Sunset',
-      subtitle: 'Golden hour magic'
+      src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
+      title: 'Dorel Studio',
+      subtitle: 'Professional Work'
     },
   ])
 
