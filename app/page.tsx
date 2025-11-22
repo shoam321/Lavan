@@ -31,12 +31,7 @@ export default function Home() {
       title: 'Dorel Studio',
       subtitle: 'Professional Work'
     },
-    {
-      id: 4,
-      src: 'https://www.facebook.com/photo/?fbid=459196583033675&set=a.357698879850113&__cft__[0]=AZWxw9ewoVRbvVccBBqQAYnZDas26t7e8lgmFM2-FKpMG8Uwo5TCwpAfcL7-5IefxE01z-sL9EyfcURXF8GBwupwkEoEBtYxXm_T6ncEmNlZKmH1NhKwBMWza53vWyb5YxLyNF17TGPdoMZS7ZBS50-YsVhG6AYEtUS3ePS3Ojndngrd6teq2BmsW8jp2NKv9aM&__tn__=EH-R',
-      title: 'Dorel Studio',
-      subtitle: 'Professional Work'
-    },
+
     {
       id: 5,
       src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
