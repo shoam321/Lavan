@@ -94,7 +94,7 @@ body {
 .site-bg {
   /* fall back to desktop image when mobile image is not present */
   background-image: url('/background-desktop.jpg');
-  background-position: center 45%;
+  background-position: center 60%;
   background-size: cover;
   background-repeat: no-repeat;
 }

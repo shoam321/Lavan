@@ -103,7 +103,7 @@
 
   /* These styles make the background cover the full screen nicely */
   background-size: cover;
-  background-position: center 45%;
+  background-position: center 60%;
   background-repeat: no-repeat;
 
   /* This 'fixes' the background so it doesn't move when you scroll */
