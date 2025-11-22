@@ -72,7 +72,7 @@ export default function Home() {
         </div>
 
         {/* Action Buttons */}
-        <div className="grid gap-2.5 px-4 pb-3.5 sm:grid-cols-2">
+        <div className="grid gap-2.5 px-4 pb-3.5 sm:grid-cols-3">
           <button
             onClick={() => ratingDialogRef.current?.showModal()}
             className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
@@ -85,6 +85,12 @@ export default function Home() {
           >
             💖 ספרו לחבר
           </button>
+          <a
+            href="/gallery"
+            className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-purple-600 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150"
+          >
+            📸 גלריה
+          </a>
         </div>
 
         {/* Social Links */}
