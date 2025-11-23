@@ -4,6 +4,7 @@ import { useState, useRef } from "react"
 import Toast from "@/components/toast"
 import RatingDialog from "@/components/rating-dialog"
 import SocialButton from "@/components/social-button"
+import GoogleReviews from "@/components/google-reviews"
 
 export default function Home() {
   const [toastMessage, setToastMessage] = useState("")
@@ -149,6 +150,11 @@ export default function Home() {
           © {new Date().getFullYear()} אולמי לבן
         </div>
         </div>
+      </div>
+
+      {/* Google Reviews Widget */}
+      <div className="absolute bottom-12 left-4 right-4 z-10 max-w-[500px] mx-auto">
+        <GoogleReviews />
       </div>
 
       {/* Toast */}

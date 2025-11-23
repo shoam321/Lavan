@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        {/* Google Reviews Widget Script */}
+        <script async src="https://cdn.trustindex.io/loader.js"></script>
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         {/* Sienna accessibility loader (client-side). The visual widget is hidden by default
