@@ -89,7 +89,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     setIsLoading(true)
     let n8nOk = false
     try {
-      const WEBHOOK_URL = "https://shairouvinov78.app.n8n.cloud/webhook/submit-rating"
+      const WEBHOOK_URL = "https://shairouvinov78.app.n8n.cloud/webhook-test/submit-referral"
       const response = await postWithRetry(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
