@@ -82,12 +82,22 @@
 
 body {
   background-color: #ffffff;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--foreground);
 }
 
-/* Background removed */
+/* Background styling */
 .site-bg {
   background-color: #ffffff;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Full-bleed clickable background link.
