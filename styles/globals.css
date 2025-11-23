@@ -82,28 +82,14 @@
 
 body {
   background-color: #ffffff;
-  background-image: url('/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color: var(--foreground);
 }
 
-/* Background styling */
-.site-bg {
-  background-color: #ffffff;
-  background-image: url('/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 /* Full-bleed clickable background link.
    This places a full-size anchor behind the UI card so clicking empty background opens the link.
 */
-/* No clickable background link — background is supplied by `body.site-bg`. */
+/* No clickable background link — background is supplied by fixed div in main component. */
 
 /* Sienna accessibility: hide injected widget UI by default so the site's
    physical appearance doesn't change. Remove these rules to show the

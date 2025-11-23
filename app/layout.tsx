@@ -29,15 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="he" dir="rtl" style={{
-      backgroundImage: 'url(/bg.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
-      minHeight: '100vh',
-    }}>
-      <body className={`font-sans antialiased site-bg`}>
+    <html lang="he" dir="rtl">
+      <body className={`font-sans antialiased`}>
         {children}
         {/* Sienna accessibility loader (client-side). The visual widget is hidden by default
             via CSS in `styles/globals.css`. Use `document.body.setAttribute('data-sienna','visible')`

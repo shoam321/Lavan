@@ -51,13 +51,24 @@ export default function Home() {
   }
 
   return (
-    <main
-      className="min-h-dvh flex items-center justify-center relative bg-white"
-      dir="rtl"
-      lang="he"
-    >
-      {/* Card */}
-      <div className="relative z-10 w-[min(420px,92vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+    <main className="min-h-screen w-full flex items-center justify-center relative">
+      {/* Fixed Background */}
+      <div 
+        className="fixed inset-0 w-full h-full" 
+        style={{
+          backgroundImage: 'url(/bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          zIndex: 0,
+        }} 
+      />
+      
+      {/* Content Wrapper */}
+      <div className="relative z-10 w-full flex items-center justify-center p-4">
+        {/* Card */}
+        <div className="relative w-[min(420px,92vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
@@ -137,12 +148,6 @@ export default function Home() {
         <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600 bg-gray-100">
           © {new Date().getFullYear()} אולמי לבן
         </div>
-      </div>
-
-      {/* Gallery Section - Below Main Content */}
-      <div className="absolute bottom-0 left-0 right-0 w-full" style={{ top: '100vh' }}>
-        <div className="w-full h-screen">
-          <ModernGallery images={galleryImages} autoplay={true} />
         </div>
       </div>
 
