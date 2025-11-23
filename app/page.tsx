@@ -54,7 +54,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen w-full flex items-center justify-center relative">
+    <main className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
       {/* Fixed Background */}
       <div 
         className="fixed inset-0 w-full h-full" 
@@ -69,7 +69,7 @@ export default function Home() {
       />
       
       {/* Content Wrapper - Centered */}
-      <div className="relative z-10 w-screen h-screen flex items-center justify-center">
+      <div className="relative z-10 flex items-center justify-center">
         {/* Card */}
         <div className="w-[min(420px,90vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}
