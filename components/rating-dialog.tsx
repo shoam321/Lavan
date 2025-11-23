@@ -137,20 +137,20 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
   return (
     <dialog
       ref={ref}
-      className="border-2 border-gray-900 rounded-2xl p-4 w-[min(92vw,720px)] shadow-2xl backdrop:bg-black/45 self-center"
+      className="border-2 border-gray-900 rounded-2xl p-3 w-[min(92vw,720px)] shadow-2xl backdrop:bg-black/45 self-center max-h-[90vh] overflow-y-auto"
     >
-      <h3 className="m-0 mb-1.5 text-base font-bold">דעתכם חשובה לנו</h3>
-      <p className="m-0 mb-2 text-[11px] tracking-wide text-gray-500 font-medium">{BUSINESS_NAME}</p>
-      <p className="m-0 mb-2 text-sm text-gray-600">דרגו כל סעיף בין ⭐1 ל-⭐5</p>
+      <h3 className="m-0 mb-1 text-base font-bold">דעתכם חשובה לנו</h3>
+      <p className="m-0 mb-1 text-[11px] tracking-wide text-gray-500 font-medium">{BUSINESS_NAME}</p>
+      <p className="m-0 mb-1.5 text-sm text-gray-600">דרגו כל סעיף בין ⭐1 ל-⭐5</p>
 
-      <form onSubmit={handleSubmit} className="space-y-2">
+      <form onSubmit={handleSubmit} className="space-y-1.5">
         {/* Hidden business name for any non-JS / fallback capture */}
         <input type="hidden" name="businessName" value={BUSINESS_NAME} />
         {questions.map((question, idx) => {
           const qKey = `q${idx + 1}` as keyof typeof ratings
           return (
-            <div key={qKey} className="grid gap-2 my-2].5 border border-gray-200 rounded-3xl p-2.5 bg-white">
-              <label className="text-sm text-gray-600">{question}</label>
+            <div key={qKey} className="grid gap-1.5 border border-gray-200 rounded-2xl p-2 bg-white">
+              <label className="text-xs text-gray-600">{question}</label>
               <StarRating value={ratings[qKey]} onChange={(value) => handleStarClick(qKey, value)} />
               {/* Hidden inputs preserved if later you want progressive enhancement / fallback */}
               <input type="hidden" name={`rating_${qKey}`} value={ratings[qKey]} />
@@ -159,17 +159,17 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
         })}
         
         {/* Optional free-text feedback field */}
-        <div className="border border-gray-200 rounded-3xl p-2.5 bg-white">
-          <label className="text-sm text-gray-600 block mb-2">משהו שתרצו להוסיף? (לא חובה)</label>
+        <div className="border border-gray-200 rounded-2xl p-2 bg-white">
+          <label className="text-xs text-gray-600 block mb-1">משהו שתרצו להוסיף? (לא חובה)</label>
           <textarea
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
             placeholder="כתבו את ההערות או הצעות שלכם כאן..."
-            className="w-full border border-gray-300 rounded-lg p-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-            rows={3}
+            className="w-full border border-gray-300 rounded-lg p-1.5 text-xs resize-none focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+            rows={2}
             maxLength={500}
           />
-          <p className="text-xs text-gray-400 mt-1 text-right">{feedback.length}/500</p>
+          <p className="text-xs text-gray-400 mt-0.5 text-right">{feedback.length}/500</p>
         </div>
         
         {/* Formspree hidden fields no longer required for n8n; keep if you need dual delivery */}
@@ -177,11 +177,11 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
         {/* <input type="hidden" name="studio_name" value="סטודיו דוראל אזולאי" /> */}
         {/* <input type="hidden" name="submission_date" value={new Date().toLocaleString("he-IL")} /> */}
         
-        <div className="flex gap-2 flex-wrap mt-2">
+        <div className="flex gap-1.5 flex-wrap mt-1.5">
           <button
             type="submit"
             disabled={isLoading}
-            className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center justify-center gap-2 border-0 rounded-full px-3.5 py-2.5 text-sm font-bold bg-gradient-to-br from-gray-900 to-gray-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? "שולח..." : "שליחה"}
           </button>
@@ -193,7 +193,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
               }
             }}
             disabled={isLoading}
-            className="flex items-center justify-center gap-2.5 border-0 rounded-full px-4.5 py-3.5 font-bold bg-white text-gray-900 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center justify-center gap-2 border-0 rounded-full px-3.5 py-2.5 text-sm font-bold bg-white text-gray-900 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             סגירה
           </button>
