@@ -99,6 +99,9 @@ export default function Home() {
       <div className="relative z-10 w-[min(420px,92vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}
         <div className="px-[18px] py-6">
+          <div className="flex justify-center mb-3">
+            <img src="/lavan-logo.png" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
+          </div>
           <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 text-gray-900 tracking-wide">
             סטודיו לבן
           </h1>
@@ -172,7 +175,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600 bg-gray-100">
-          © {new Date().getFullYear()} סטודיו דוראל אזולאי
+          © {new Date().getFullYear()} סטודיו לבן
         </div>
       </div>
 
