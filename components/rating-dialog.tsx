@@ -138,7 +138,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     <dialog
       ref={ref}
       className="border-2 border-gray-900 rounded-xl p-2 w-[min(92vw,500px)] shadow-2xl backdrop:bg-black/45 self-center max-h-[85vh] overflow-y-auto"
-      style={{position: 'fixed', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 9999}}
+      style={{position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 9999}}
     >
       <h3 className="m-0 mb-0.5 text-sm font-bold">דעתכם חשובה לנו</h3>
       <p className="m-0 mb-0.5 text-[10px] tracking-wide text-gray-500 font-medium">{BUSINESS_NAME}</p>
