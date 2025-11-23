@@ -19,10 +19,12 @@ export default function Home() {
 
   const handleRatingComplete = (avg: number) => {
     if (avg >= 4) {
-      // Immediately redirect to review page - no delay, no toast
-      window.location.href = "/review"
-    } else {
-      showToastMessage("תודה רבה על הדירוג שלך!")
+      // Open Google review form directly in new tab
+      window.open(
+        "https://www.google.com/search?sca_esv=2d910e10f9e5456a&sxsrf=AE3TifPArvlJnTbAMZXkp4xasWA9D-VlMg:1763899836858&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-OVol2rWfC7DBmvEQ71yl5V0Q7NJC7xeESmynejBoqY7IZnhaR9gAvXnhqGJIJlQO6ShZ0iLd-QpFA32esRzNNHLH0YKo1-62uNQLiXitEFF38CyA%3D%3D&q=%D7%90%D7%95%D7%9C%D7%9E%D7%99+%D7%9C%D7%91%D7%9F+%D7%91%D7%99%D7%A7%D7%95%D7%A8%D7%95%D7%AA&sa=X&ved=2ahUKEwiV2sf5noiRAxWOQfEDHdBUHyQQ0bkNegQIIRAE&biw=1366&bih=607&dpr=1#lrd=0x151db0d03ede08cd:0x52957213cfa03afd,3,,,,",
+        "_blank"
+      )
+      showToastMessage("תודה! הביקורה שלך תעזור לנו")
     }
   }
 
