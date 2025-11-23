@@ -31,7 +31,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     if (allRatingsComplete && !isLoading) {
       const timer = setTimeout(() => {
         handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-      }, 2000)
+      }, 3000)
       return () => clearTimeout(timer)
     }
   }, [allRatingsComplete, isLoading])
