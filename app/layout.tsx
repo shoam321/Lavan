@@ -16,15 +16,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/lavan-logo.png",
-        type: "image/png",
-      },
-      {
-        url: "/icon.svg",
+        url: "/lavan-logo.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/lavan-logo.png",
   },
 }
 

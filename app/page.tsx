@@ -100,7 +100,7 @@ export default function Home() {
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
-            <img src="/lavan-logo.png" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
+            <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
           </div>
           <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 text-gray-900 tracking-wide">
             סטודיו לבן
