@@ -9,6 +9,7 @@ import GoogleReviews from "@/components/google-reviews"
 export default function Home() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
+  const [hasSubmitted, setHasSubmitted] = useState(false)
   const ratingDialogRef = useRef<HTMLDialogElement>(null)
 
   const showToastMessage = (message: string) => {
@@ -18,6 +19,8 @@ export default function Home() {
   }
 
   const handleRatingComplete = (avg: number) => {
+    if (hasSubmitted) return
+    setHasSubmitted(true)
     if (avg >= 4) {
       // Open Google review form directly in new tab
       window.open(
