@@ -56,7 +56,7 @@ export default function Home() {
     showToastMessage("תודה רבה, דעתך חשובה לנו")
     if (avg >= 4) {
       setTimeout(() => {
-        window.location.href = "https://search.google.com/local/writereview?placeid=ChIJZ2KSBii7HRURMTKVTdJGT8w"
+        window.location.href = "https://www.google.com/search?sca_esv=2d910e10f9e5456a&sxsrf=AE3TifPArvlJnTbAMZXkp4xasWA9D-VlMg:1763899836858&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-OVol2rWfC7DBmvEQ71yl5V0Q7NJC7xeESmynejBoqY7IZnhaR9gAvXnhqGJIJlQO6ShZ0iLd-QpFA32esRzNNHLH0YKo1-62uNQLiXitEFF38CyA%3D%3D&q=%D7%90%D7%95%D7%9C%D7%9E%D7%99+%D7%9C%D7%91%D7%9F+%D7%91%D7%99%D7%A7%D7%95%D7%A8%D7%95%D7%AA&sa=X&ved=2ahUKEwiV2sf5noiRAxWOQfEDHdBUHyQQ0bkNegQIIRAE&biw=1366&bih=607&dpr=1#lrd=0x151db0d03ede08cd:0x52957213cfa03afd,3,,,,"
       }, 1000)
     }
   }
@@ -128,7 +128,7 @@ export default function Home() {
           <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
           <div className="grid grid-cols-4 gap-2.5">
             <SocialButton
-              href="https://www.instagram.com/lavan/"
+              href="https://www.instagram.com/lavaneruim/"
               label="Instagram"
               style={{ background: "linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)" }}
               icon={
@@ -138,7 +138,7 @@ export default function Home() {
               }
             />
             <SocialButton
-              href="https://www.facebook.com/share/1Vr3zZbWQt/?mibextid=wwXIfr"
+              href="https://www.facebook.com/p/%D7%90%D7%95%D7%9C%D7%9E%D7%99-%D7%9C%D7%91%D7%9F-100063862635937/?locale=he_IL"
               label="Facebook"
               className="bg-blue-600"
               icon={
@@ -148,7 +148,7 @@ export default function Home() {
               }
             />
             <SocialButton
-              href="https://www.tiktok.com/@lavan?lang=he-IL"
+              href="https://www.tiktok.com/@lavan_events"
               label="TikTok"
               className="bg-black"
               icon={
@@ -158,7 +158,7 @@ export default function Home() {
               }
             />
             <SocialButton
-              href="https://wa.me/972546442604"
+              href="https://wa.me/972548101622"
               label="WhatsApp"
               style={{ background: "#25D366" }}
               icon={
