@@ -5,7 +5,7 @@ import type React from "react"
 import { forwardRef, useState } from "react"
 
 // Central business identifier (used in payload + UI + potential fallbacks)
-const BUSINESS_NAME = "dorel-studio"
+const BUSINESS_NAME = "lavan-studio"
 import StarRating from "./star-rating"
 
 interface RatingDialogProps {

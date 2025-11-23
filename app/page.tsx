@@ -16,32 +16,32 @@ export default function Home() {
     {
       id: 1,
       src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
-      title: 'Dorel Studio',
+      title: 'Lavan Studio',
       subtitle: 'Professional Work'
     },
     {
       id: 2,
       src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
-      title: 'Dorel Studio',
+      title: 'Lavan Studio',
       subtitle: 'Professional Work'
     },
     {
       id: 3,
       src: 'https://lh3.googleusercontent.com/p/AF1QipM0NFyU_xav2Qp7-etRANZ3K3ZJT9sCpZjLUPQZ=s680-w680-h510-rw',
-      title: 'Dorel Studio',
+      title: 'Lavan Studio',
       subtitle: 'Professional Work'
     },
 
     {
       id: 5,
       src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
-      title: 'Dorel Studio',
+      title: 'Lavan Studio',
       subtitle: 'Professional Work'
     },
     {
       id: 6,
       src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
-      title: 'Dorel Studio',
+      title: 'Lavan Studio',
       subtitle: 'Professional Work'
     },
   ])
@@ -63,9 +63,9 @@ export default function Home() {
 
   const handleShare = async () => {
     const shareData = {
-      title: "סטודיו דוראל אזולאי",
+      title: "סטודיו לבן",
       text: "ממליץ לבדוק את הסטודיו!",
-      url: "https://dorelazulay.co.il/?fbclid=PAZXh0bgNhZW0CMTEAAaZlRCLmopF17q5inc4w2-ZZ6aBuzcf2BE8Jk_rh0GRn6ciQW5Y2vpF1ISw_aem_eeCSzS95UJc1hSvBD5Q6Dg",
+      url: "https://lavan.co.il/",
     }
 
     if (navigator.share) {
@@ -100,7 +100,7 @@ export default function Home() {
         {/* Header */}
         <div className="px-[18px] py-6">
           <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 text-gray-900 tracking-wide">
-            סטודיו דוראל אזולאי
+            סטודיו לבן
           </h1>
           <p className="text-center text-sm text-gray-600 opacity-90 m-0 mb-3.5">
             אימון אישי וקבוצות — תוצאות שמרגישים
@@ -128,7 +128,7 @@ export default function Home() {
           <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
           <div className="grid grid-cols-4 gap-2.5">
             <SocialButton
-              href="https://www.instagram.com/dorelazulay/"
+              href="https://www.instagram.com/lavan/"
               label="Instagram"
               style={{ background: "linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)" }}
               icon={
@@ -148,7 +148,7 @@ export default function Home() {
               }
             />
             <SocialButton
-              href="https://www.tiktok.com/@dorel_azulay?lang=he-IL"
+              href="https://www.tiktok.com/@lavan?lang=he-IL"
               label="TikTok"
               className="bg-black"
               icon={
