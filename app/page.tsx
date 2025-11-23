@@ -68,10 +68,10 @@ export default function Home() {
         }} 
       />
       
-      {/* Content Wrapper */}
-      <div className="relative z-10 w-full flex items-center justify-center p-4">
+      {/* Content Wrapper - Centered */}
+      <div className="relative z-10 w-screen h-screen flex items-center justify-center">
         {/* Card */}
-        <div className="relative w-[min(420px,92vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+        <div className="w-[min(420px,90vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
