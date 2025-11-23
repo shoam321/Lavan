@@ -54,7 +54,7 @@ export default function Home() {
   }
 
   return (
-    <main className="fixed inset-0 flex items-center justify-center w-screen h-screen">
+    <main className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
       {/* Fixed Background */}
       <div 
         className="fixed inset-0 w-full h-full" 
