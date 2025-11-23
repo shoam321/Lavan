@@ -137,7 +137,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
   return (
     <dialog
       ref={ref}
-      className="border-2 border-gray-900 rounded-xl p-2 w-[min(92vw,680px)] shadow-2xl backdrop:bg-black/45 self-center max-h-[85vh] overflow-y-auto"
+      className="border-2 border-gray-900 rounded-xl p-2 w-[min(92vw,500px)] shadow-2xl backdrop:bg-black/45 self-center max-h-[85vh] overflow-y-auto"
     >
       <h3 className="m-0 mb-0.5 text-sm font-bold">דעתכם חשובה לנו</h3>
       <p className="m-0 mb-0.5 text-[10px] tracking-wide text-gray-500 font-medium">{BUSINESS_NAME}</p>
