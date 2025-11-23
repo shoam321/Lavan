@@ -34,7 +34,7 @@ export default function RootLayout({
         {/* Google Reviews Widget Script */}
         <script async src="https://cdn.trustindex.io/loader.js"></script>
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased overflow-hidden`}>
         {children}
         {/* Sienna accessibility loader (client-side). The visual widget is hidden by default
             via CSS in `styles/globals.css`. Use `document.body.setAttribute('data-sienna','visible')`
