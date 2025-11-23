@@ -88,7 +88,7 @@ export default function Home() {
 
   return (
     <main
-      className="min-h-dvh flex items-center justify-center relative"
+      className="min-h-dvh flex items-center justify-center relative z-10"
       dir="rtl"
       lang="he"
     >
@@ -103,10 +103,9 @@ export default function Home() {
             <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
           </div>
           <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 text-gray-900 tracking-wide">
-            סטודיו לבן
+            אולמי לבן
           </h1>
           <p className="text-center text-sm text-gray-600 opacity-90 m-0 mb-3.5">
-            אימון אישי וקבוצות — תוצאות שמרגישים
           </p>
         </div>
 
@@ -175,7 +174,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600 bg-gray-100">
-          © {new Date().getFullYear()} סטודיו לבן
+          © {new Date().getFullYear()} אולמי לבן
         </div>
       </div>
 
