@@ -18,12 +18,11 @@ export default function Home() {
   }
 
   const handleRatingComplete = (avg: number) => {
-    showToastMessage("תודה רבה, דעתך חשובה לנו")
     if (avg >= 4) {
-      // Navigate to review page instead of showing modal
-      setTimeout(() => {
-        window.location.href = "/review"
-      }, 500)
+      // Immediately redirect to review page - no delay, no toast
+      window.location.href = "/review"
+    } else {
+      showToastMessage("תודה רבה על הדירוג שלך!")
     }
   }
 
