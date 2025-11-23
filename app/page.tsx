@@ -154,11 +154,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Google Reviews Widget */}
-      <div className="absolute bottom-12 left-4 right-4 z-10 max-w-[500px] mx-auto">
-        <GoogleReviews />
-      </div>
-
       {/* Google Review Modal */}
       {showGoogleReviewModal && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
