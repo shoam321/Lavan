@@ -54,7 +54,7 @@ export default function Home() {
   }
 
   return (
-    <main className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+    <main className="fixed inset-0 flex items-center justify-center" style={{direction: 'ltr'}}>
       {/* Fixed Background */}
       <div 
         className="fixed inset-0 w-full h-full" 
@@ -69,7 +69,7 @@ export default function Home() {
       />
       
       {/* Content - Centered */}
-      <div className="relative z-10">
+      <div className="relative z-10" style={{direction: 'rtl'}}>
         {/* Card */}
         <div className="w-[min(420px,90vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}

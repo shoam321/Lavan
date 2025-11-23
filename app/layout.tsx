@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="he" dir="rtl">
+    <html lang="he" dir="rtl" className="h-full overflow-hidden">
       <head>
         {/* Google Reviews Widget Script */}
         <script async src="https://cdn.trustindex.io/loader.js"></script>
