@@ -4,47 +4,11 @@ import { useState, useRef } from "react"
 import Toast from "@/components/toast"
 import RatingDialog from "@/components/rating-dialog"
 import SocialButton from "@/components/social-button"
-import ModernGallery from "@/components/modern-gallery"
 
 export default function Home() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
   const ratingDialogRef = useRef<HTMLDialogElement>(null)
-
-  // Gallery images
-  const [galleryImages] = useState([
-    {
-      id: 1,
-      src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
-      title: 'Lavan Studio',
-      subtitle: 'Professional Work'
-    },
-    {
-      id: 2,
-      src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
-      title: 'Lavan Studio',
-      subtitle: 'Professional Work'
-    },
-    {
-      id: 3,
-      src: 'https://lh3.googleusercontent.com/p/AF1QipM0NFyU_xav2Qp7-etRANZ3K3ZJT9sCpZjLUPQZ=s680-w680-h510-rw',
-      title: 'Lavan Studio',
-      subtitle: 'Professional Work'
-    },
-
-    {
-      id: 5,
-      src: 'https://lh3.googleusercontent.com/p/AF1QipNT7ssy1biVjoGPCMyUB8Jmz-8ZxR5PB8Eqdq-W=s680-w680-h510-rw',
-      title: 'Lavan Studio',
-      subtitle: 'Professional Work'
-    },
-    {
-      id: 6,
-      src: 'https://lh3.googleusercontent.com/p/AF1QipOQ2P7EnH94DU7ZSVrD1TlEOfc7S3x_vhvB6XyR=s680-w680-h510-rw',
-      title: 'Lavan Studio',
-      subtitle: 'Professional Work'
-    },
-  ])
 
   const showToastMessage = (message: string) => {
     setToastMessage(message)
