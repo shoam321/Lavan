@@ -9,6 +9,7 @@ import GoogleReviews from "@/components/google-reviews"
 export default function Home() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
+  const [showGoogleReviewModal, setShowGoogleReviewModal] = useState(false)
   const ratingDialogRef = useRef<HTMLDialogElement>(null)
 
   const showToastMessage = (message: string) => {
@@ -20,9 +21,10 @@ export default function Home() {
   const handleRatingComplete = (avg: number) => {
     showToastMessage("תודה רבה, דעתך חשובה לנו")
     if (avg >= 4) {
+      // Open Google review modal instead of redirect
       setTimeout(() => {
-        window.location.href = "https://www.google.com/search?sca_esv=2d910e10f9e5456a&sxsrf=AE3TifPArvlJnTbAMZXkp4xasWA9D-VlMg:1763899836858&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-OVol2rWfC7DBmvEQ71yl5V0Q7NJC7xeESmynejBoqY7IZnhaR9gAvXnhqGJIJlQO6ShZ0iLd-QpFA32esRzNNHLH0YKo1-62uNQLiXitEFF38CyA%3D%3D&q=%D7%90%D7%95%D7%9C%D7%9E%D7%99+%D7%9C%D7%91%D7%9F+%D7%91%D7%99%D7%A7%D7%95%D7%A8%D7%95%D7%AA&sa=X&ved=2ahUKEwiV2sf5noiRAxWOQfEDHdBUHyQQ0bkNegQIIRAE&biw=1366&bih=607&dpr=1#lrd=0x151db0d03ede08cd:0x52957213cfa03afd,3,,,,"
-      }, 1000)
+        setShowGoogleReviewModal(true)
+      }, 500)
     }
   }
 
@@ -156,6 +158,44 @@ export default function Home() {
       <div className="absolute bottom-12 left-4 right-4 z-10 max-w-[500px] mx-auto">
         <GoogleReviews />
       </div>
+
+      {/* Google Review Modal */}
+      {showGoogleReviewModal && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-4 w-[min(92vw,500px)] shadow-2xl max-h-[85vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="text-xl font-bold text-gray-900 m-0">השאירו ביקורת בגוגל</h2>
+              <button
+                onClick={() => setShowGoogleReviewModal(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl leading-none"
+              >
+                ×
+              </button>
+            </div>
+            
+            <p className="text-sm text-gray-600 mb-3">
+              אנחנו מודים על הביקורת שלכם! לחצו להשאיר ביקורת בגוגל והיא תיפרסם מיד.
+            </p>
+
+            <div className="space-y-2">
+              <a
+                href="https://www.google.com/search?sca_esv=2d910e10f9e5456a&sxsrf=AE3TifPArvlJnTbAMZXkp4xasWA9D-VlMg:1763899836858&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-OVol2rWfC7DBmvEQ71yl5V0Q7NJC7xeESmynejBoqY7IZnhaR9gAvXnhqGJIJlQO6ShZ0iLd-QpFA32esRzNNHLH0YKo1-62uNQLiXitEFF38CyA%3D%3D&q=%D7%90%D7%95%D7%9C%D7%9E%D7%99+%D7%9C%D7%91%D7%9F+%D7%91%D7%99%D7%A7%D7%95%D7%A8%D7%95%D7%AA&sa=X&ved=2ahUKEwiV2sf5noiRAxWOQfEDHdBUHyQQ0bkNegQIIRAE&biw=1366&bih=607&dpr=1#lrd=0x151db0d03ede08cd:0x52957213cfa03afd,3,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full text-center transition-all"
+              >
+                🌟 כתבו ביקורת בגוגל
+              </a>
+              <button
+                onClick={() => setShowGoogleReviewModal(false)}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold py-2 px-3 rounded-full transition-all"
+              >
+                סגור
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Toast */}
       <Toast message={toastMessage} isVisible={showToast} />
