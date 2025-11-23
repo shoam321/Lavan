@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { forwardRef, useState } from "react"
+import { forwardRef, useState, useEffect } from "react"
 
 // Central business identifier (used in payload + UI + potential fallbacks)
 const BUSINESS_NAME = "lavan-studio"
@@ -25,6 +25,16 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
 
   const ratingValues = Object.values(ratings)
   const completedRatings = ratingValues.filter((n) => n > 0)
+  const allRatingsComplete = completedRatings.length === 5
+
+  useEffect(() => {
+    if (allRatingsComplete && !isLoading) {
+      const timer = setTimeout(() => {
+        handleSubmit({ preventDefault: () => {} } as React.FormEvent)
+      }, 2000)
+      return () => clearTimeout(timer)
+    }
+  }, [allRatingsComplete, isLoading])
 
   const handleStarClick = (question: keyof typeof ratings, value: number) => {
     setRatings((prev) => ({ ...prev, [question]: value }))
