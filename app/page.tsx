@@ -88,20 +88,10 @@ export default function Home() {
 
   return (
     <main
-      className="min-h-dvh flex items-center justify-center relative z-10"
+      className="min-h-dvh flex items-center justify-center relative bg-white"
       dir="rtl"
       lang="he"
-      style={{
-        backgroundImage: 'url(/background-desktop.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent z-0" />
-
       {/* Card */}
       <div className="relative z-10 w-[min(420px,92vw)] bg-white/92 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         {/* Header */}

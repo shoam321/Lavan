@@ -81,36 +81,13 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: #ffffff;
   color: var(--foreground);
 }
 
-/* Responsive site background image utility
-   Place two images in `public/`:
-     - `background-mobile.jpg` (used by default for small screens)
-     - `background-desktop.jpg` (used for md and larger screens)
-   This mirrors the previous inline background positioning used in `app/page.tsx`.
-*/
+/* Background removed */
 .site-bg {
-  background-image: url('/background-desktop.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .site-bg {
-  background-image: url('/background-desktop.jpg');
-  }
+  background-color: #ffffff;
 }
 
 /* Full-bleed clickable background link.
