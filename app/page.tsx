@@ -74,7 +74,7 @@ export default function Home() {
       {/* Content - Centered */}
       <div className="relative z-10" style={{direction: 'rtl'}}>
         {/* Card */}
-        <div className="w-[min(420px,90vw)] backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
+        <div className="w-[min(420px,90vw)] backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.1)'}}>
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="border-t border-gray-200 px-3.5 py-3" style={{backgroundColor: 'rgba(249, 250, 251, 0.5)'}}>
+        <div className="border-t border-gray-200 px-3.5 py-3" style={{backgroundColor: 'rgba(249, 250, 251, 0.1)'}}>
           <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
           <div className="grid grid-cols-4 gap-2.5">
             <SocialButton
