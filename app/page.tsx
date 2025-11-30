@@ -74,7 +74,7 @@ export default function Home() {
       {/* Content - Centered */}
       <div className="relative z-10" style={{direction: 'rtl'}}>
         {/* Card */}
-        <div className="w-[min(420px,90vw)] bg-white/50 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+        <div className="w-[min(420px,90vw)] backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
