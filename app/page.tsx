@@ -74,7 +74,11 @@ export default function Home() {
       {/* Content - Centered */}
       <div className="relative z-10" style={{direction: 'rtl'}}>
         {/* Card */}
-        <div className="w-[min(420px,90vw)] backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.1)'}}>
+        <div className="w-[min(420px,90vw)] backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg overflow-hidden" style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%)',
+          backdropFilter: 'blur(10px)'
+        }}>
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex justify-center mb-3">
