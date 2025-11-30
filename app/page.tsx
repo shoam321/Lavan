@@ -104,7 +104,7 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="border-t border-gray-200 bg-gray-50 px-3.5 py-3">
+        <div className="border-t border-gray-200 px-3.5 py-3" style={{backgroundColor: 'rgba(249, 250, 251, 0.5)'}}>
           <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
           <div className="grid grid-cols-4 gap-2.5">
             <SocialButton
