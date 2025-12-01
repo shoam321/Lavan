@@ -83,13 +83,13 @@ export default function Home() {
         }}>
         {/* Header */}
         <div className="px-[18px] py-6">
-          <div className="flex flex-col items-center justify-center mb-3" style={{backdropFilter: 'blur(10px)', padding: '16px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.3)'}}>
+          <div className="flex flex-col items-center justify-center mb-3" style={{backdropFilter: 'blur(10px)', padding: '16px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.1)', border: '1.5px solid rgba(255,255,255,0.15)'}}>
             <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" style={{marginBottom: '4px'}} />
             <div className="flex items-center justify-center gap-3 mb-0">
               <svg width="30" height="2" viewBox="0 0 30 2" style={{opacity: 0.8}}>
                 <line x1="0" y1="1" x2="30" y2="1" stroke="#000000" strokeWidth="1.2" strokeDasharray="3,4" />
               </svg>
-              <p style={{margin: '0', fontSize: '16px', fontWeight: '700', letterSpacing: '1.2px', color: '#000000', fontFamily: 'Georgia, serif'}}>הבחירה הנכונה</p>
+              <p style={{margin: '0', fontSize: '20px', fontWeight: '700', letterSpacing: '1.2px', color: '#000000', fontFamily: 'Georgia, serif'}}>הבחירה הנכונה</p>
               <svg width="30" height="2" viewBox="0 0 30 2" style={{opacity: 0.8}}>
                 <line x1="0" y1="1" x2="30" y2="1" stroke="#000000" strokeWidth="1.2" strokeDasharray="3,4" />
               </svg>
