@@ -74,17 +74,19 @@ export default function Home() {
       {/* Content - Centered */}
       <div className="relative z-10" style={{direction: 'rtl'}}>
         {/* Card */}
-        <div className="w-[min(420px,90vw)] overflow-hidden rounded-3xl shadow-lg border-2 border-white/30" style={{
-          backgroundColor: 'transparent',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)'
+        <div className="w-[min(420px,90vw)] overflow-hidden rounded-3xl shadow-2xl" style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.08)',
+          backdropFilter: 'blur(15px)',
+          WebkitBackdropFilter: 'blur(15px)',
+          border: '2px solid rgba(255, 255, 255, 0.25)',
+          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
         }}>
         {/* Header */}
         <div className="px-[18px] py-6">
-          <div className="flex justify-center mb-3" style={{backdropFilter: 'blur(5px)', padding: '8px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.15)'}}>
+          <div className="flex justify-center mb-3" style={{backdropFilter: 'blur(10px)', padding: '12px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.3)'}}>
             <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
           </div>
-          <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 tracking-wide" style={{color: '#1f2937', textShadow: '0 2px 4px rgba(255,255,255,0.5)'}}>
+          <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 tracking-wide" style={{color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.3)'}}>
             אולמי לבן
           </h1>
           <p className="text-center text-sm text-gray-600 opacity-90 m-0 mb-3.5">
@@ -108,8 +110,8 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="border-t border-white/20 px-3.5 py-3" style={{backgroundColor: 'transparent'}}>
-          <h3 className="text-center m-0 mb-2.5 text-sm text-gray-600">עקבו אחרינו</h3>
+        <div className="border-t border-white/20 px-3.5 py-3" style={{backgroundColor: 'rgba(255,255,255,0.05)'}}>
+          <h3 className="text-center m-0 mb-2.5 text-sm font-semibold" style={{color: '#ffffff'}}>עקבו אחרינו</h3>
           <div className="grid grid-cols-4 gap-2.5">
             <SocialButton
               href="https://www.instagram.com/lavaneruim/"
@@ -155,8 +157,8 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600" style={{backgroundColor: 'rgba(243, 244, 246, 0.1)'}}>
-          © {new Date().getFullYear()} אולמי לבן
+        <div className="border-t px-3.5 py-2.5 text-center text-xs font-medium" style={{borderColor: 'rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#ffffff'}}>
+          DESIGNED FOR LAVAN ERUIM © {new Date().getFullYear()}
         </div>
         </div>
       </div>
