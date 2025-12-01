@@ -83,14 +83,12 @@ export default function Home() {
         }}>
         {/* Header */}
         <div className="px-[18px] py-6">
-          <div className="flex justify-center mb-3" style={{backdropFilter: 'blur(10px)', padding: '12px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.3)'}}>
-            <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
-          </div>
-          <div className="text-center mb-4" style={{position: 'relative', paddingTop: '8px'}}>
-            <p style={{margin: '0 0 8px 0', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>הבחירה הנכונה</p>
-            <svg width="80" height="2" viewBox="0 0 80 2" style={{margin: '0 auto', opacity: 0.7}}>
-              <line x1="0" y1="1" x2="30" y2="1" stroke="#ffffff" strokeWidth="1.5" strokeDasharray="5,3" />
-              <line x1="50" y1="1" x2="80" y2="1" stroke="#ffffff" strokeWidth="1.5" strokeDasharray="5,3" />
+          <div className="flex flex-col items-center justify-center mb-3" style={{backdropFilter: 'blur(10px)', padding: '16px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.3)'}}>
+            <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain mb-2" />
+            <p style={{margin: '0 0 6px 0', fontSize: '11px', fontWeight: '600', letterSpacing: '0.8px', color: '#ffffff', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>הבחירה הנכונה</p>
+            <svg width="70" height="2" viewBox="0 0 70 2" style={{opacity: 0.8}}>
+              <line x1="0" y1="1" x2="25" y2="1" stroke="#ffffff" strokeWidth="1.2" strokeDasharray="4,3" />
+              <line x1="45" y1="1" x2="70" y2="1" stroke="#ffffff" strokeWidth="1.2" strokeDasharray="4,3" />
             </svg>
           </div>
           <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 tracking-wide" style={{color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.3)'}}>
