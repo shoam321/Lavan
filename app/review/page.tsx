@@ -21,7 +21,7 @@ export default function ReviewPage() {
     }
 
     try {
-      await fetch("https://shairouvinov78.app.n8n.cloud/webhook/submit-rating", {
+      await fetch("https://shairouvinovisr.app.n8n.cloud/webhook/submit-rating", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(reviewData),
