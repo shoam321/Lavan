@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/lavan-logo.svg",
-        type: "image/svg+xml",
+        url: "/lavan-logo.png",
+        type: "image/png",
       },
     ],
   },
