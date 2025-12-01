@@ -81,10 +81,10 @@ export default function Home() {
         }}>
         {/* Header */}
         <div className="px-[18px] py-6">
-          <div className="flex justify-center mb-3">
+          <div className="flex justify-center mb-3" style={{backdropFilter: 'blur(5px)', padding: '8px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.15)'}}>
             <img src="/lavan-logo.svg" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" />
           </div>
-          <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 text-gray-900 tracking-wide">
+          <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 tracking-wide" style={{color: '#1f2937', textShadow: '0 2px 4px rgba(255,255,255,0.5)'}}>
             אולמי לבן
           </h1>
           <p className="text-center text-sm text-gray-600 opacity-90 m-0 mb-3.5">
