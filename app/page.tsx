@@ -84,7 +84,7 @@ export default function Home() {
         {/* Header */}
         <div className="px-[18px] py-6">
           <div className="flex flex-col items-center justify-center mb-3" style={{padding: '16px', borderRadius: '16px', backgroundColor: 'rgba(255,255,255,0)', border: '1.5px solid rgba(255,255,255,0.1)'}}>
-            <img src="/lavan-logo.png" alt="Lavan Logo" className="h-16 sm:h-20 object-contain" style={{marginBottom: '4px'}} />
+            <img src="/lavan-logo.png" alt="Lavan Logo" className="h-20 sm:h-32 object-contain" style={{marginBottom: '8px'}} />
             <div className="flex items-center justify-center gap-3 mb-0">
               <svg width="30" height="2" viewBox="0 0 30 2" style={{opacity: 0.8}}>
                 <line x1="0" y1="1" x2="30" y2="1" stroke="#000000" strokeWidth="1.2" strokeDasharray="3,4" />
@@ -95,7 +95,8 @@ export default function Home() {
               </svg>
             </div>
           </div>
-          <h1 className="text-center font-bold text-2xl sm:text-3xl m-0 mb-2.5 tracking-wide" style={{color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.3)'}}>
+          <h1 className="text-center font-bold text-4xl sm:text-5xl m-0 mb-2.5 tracking-wide" style={{color: '#ffffff', textShadow: '0 4px 12px rgba(0,0,0,0.5)', letterSpacing: '2px'}}>
+
             אולמי לבן
           </h1>
           <p className="text-center text-sm text-gray-600 opacity-90 m-0 mb-3.5">
