@@ -1,8 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
-  <defs>
-    <style>
-      .lavan-title { font-family: Georgia, serif; font-size: 72px; font-weight: bold; }
-    </style>
-  </defs>
-  <text x="20" y="70" class="lavan-title">LAVAN</text>
-</svg>
