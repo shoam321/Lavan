@@ -155,7 +155,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600 bg-gray-100">
+        <div className="border-t border-gray-200 px-3.5 py-2.5 text-center text-xs text-gray-600" style={{backgroundColor: 'rgba(243, 244, 246, 0.1)'}}>
           © {new Date().getFullYear()} אולמי לבן
         </div>
         </div>
