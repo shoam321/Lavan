@@ -42,24 +42,16 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
 
   // Helper: build enriched payload
   const buildPayload = (average: number) => {
-    const starDisplay = (r: number) => '⭐'.repeat(r) + ` (${r}/5)`
     return {
-      businessName: BUSINESS_NAME,
-      ratings,
-      ratingsStarDisplay: {
-        overallExperience: starDisplay(ratings.q1),
-        coachingQuality: starDisplay(ratings.q2),
-        serviceLevel: starDisplay(ratings.q3),
-        atmosphereCleanliness: starDisplay(ratings.q4),
-        recommendationLikelihood: starDisplay(ratings.q5),
-      },
-      average: average.toFixed(1),
-      averageStarDisplay: `⭐ ${average.toFixed(1)}/5 ${average >= 4 ? '🎉' : ''}`,
-      feedback: feedback.trim() || "(no feedback provided)",
+      businessName: "Dorel Studio",
+      average: Math.round(average * 10) / 10,
+      feedback: feedback.trim() || "",
       timestamp: new Date().toISOString(),
-      locale: typeof navigator !== 'undefined' ? navigator.language : 'he-IL',
-      timezoneOffsetMinutes: new Date().getTimezoneOffset(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'server',
+      q1: ratings.q1,
+      q2: ratings.q2,
+      q3: ratings.q3,
+      q4: ratings.q4,
+      q5: ratings.q5
     }
   }
 
@@ -89,7 +81,7 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     setIsLoading(true)
     let n8nOk = false
     try {
-      const WEBHOOK_URL = "https://shairouvinov78.app.n8n.cloud/webhook-test/submit-referral"
+      const WEBHOOK_URL = "https://shairouvinovisr.app.n8n.cloud/webhook/submit-rating"
       const response = await postWithRetry(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -109,18 +101,15 @@ const RatingDialog = forwardRef<HTMLDialogElement, RatingDialogProps>(({ onCompl
     if (!n8nOk) {
       try {
         const formData = new FormData()
-        formData.append('overall_experience', payload.ratingsStarDisplay.overallExperience)
-        formData.append('coaching_quality', payload.ratingsStarDisplay.coachingQuality)
-        formData.append('service_level', payload.ratingsStarDisplay.serviceLevel)
-        formData.append('atmosphere_cleanliness', payload.ratingsStarDisplay.atmosphereCleanliness)
-        formData.append('recommendation_likelihood', payload.ratingsStarDisplay.recommendationLikelihood)
-        formData.append('average', payload.averageStarDisplay)
+        formData.append('businessName', payload.businessName)
+        formData.append('average', payload.average.toString())
         formData.append('feedback', payload.feedback)
-        formData.append('business_name', payload.businessName)
         formData.append('timestamp', payload.timestamp)
-        formData.append('locale', payload.locale)
-        formData.append('tz_offset_minutes', payload.timezoneOffsetMinutes.toString())
-        formData.append('user_agent', payload.userAgent)
+        formData.append('q1', payload.q1.toString())
+        formData.append('q2', payload.q2.toString())
+        formData.append('q3', payload.q3.toString())
+        formData.append('q4', payload.q4.toString())
+        formData.append('q5', payload.q5.toString())
         await fetch('https://formspree.io/f/xdkbkoel', { method: 'POST', body: formData })
         console.log('Fallback sent to Formspree')
       } catch (err) {
